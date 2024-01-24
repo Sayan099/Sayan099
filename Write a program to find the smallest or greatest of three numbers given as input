@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+    int smallest, greatest;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    // Initially, assume the first number is the smallest and greatest
+    smallest = greatest = num1;
+
+    // Check for the smallest number
+    if (num2 < smallest) {
+        smallest = num2;
+    }
+    if (num3 < smallest) {
+        smallest = num3;
+    }
+
+    // Check for the greatest number
+    if (num2 > greatest) {
+        greatest = num2;
+    }
+    if (num3 > greatest) {
+        greatest = num3;
+    }
+
+    printf("Smallest number: %d\n", smallest);
+    printf("Greatest number: %d\n", greatest);
+
+    return 0;
+}
